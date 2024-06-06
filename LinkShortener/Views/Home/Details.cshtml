@@ -1,0 +1,29 @@
+﻿@model LinkShortener.Models.Links
+
+@{
+    ViewData["Title"] = "Link Details";
+}
+
+<h1>Link Details</h1>
+
+<div>
+    <h4>Link</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Original Url
+        </dt>
+        <dd class="col-sm-10">
+            @Model.OriginalUrl
+        </dd>
+        <dt class="col-sm-2">
+            Short Url
+        </dt>
+        <dd class="col-sm-10">
+            @Model.ShortUrl
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-primary">Back to Create</a>
+</div>

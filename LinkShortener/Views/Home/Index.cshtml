@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model LinkShortener.Models.Links
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">¡Bienvenido a ShortyLink!</h2>
+            <form asp-action="Create">
+                <div class="input-group mb-3">
+                    <input asp-for="OriginalUrl" class="form-control" placeholder="Ingresa tu URL original aquí" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-link"></i> Acortar</button>
+                    </div>
+                </div>
+                <span asp-validation-for="OriginalUrl" class="text-danger"></span>
+
+            </form>
+            <hr>
+            <div class="text-center">
+                <a asp-action="ShowAllLinks" class="btn btn-link"><i class="fas fa-list"></i> Ver Todos los Enlaces</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

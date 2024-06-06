@@ -1,0 +1,49 @@
+﻿@model List<LinkShortener.Models.Links>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Todos los Enlaces</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Original URL</th>
+                            <th scope="col">Short URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var link in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => link.OriginalUrl)</td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="/short/@link.ShortUrl" readonly>
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-primary copy-button" data-toggle="tooltip" title="Copiar">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Función para copiar el texto del enlace corto al portapapeles
+        $('.copy-button').click(function () {
+            var shortUrlInput = $(this).closest('.input-group').find('input');
+            shortUrlInput.select();
+            document.execCommand('copy');
+            $(this).tooltip('show').attr('title', '¡Copiado!').tooltip('hide');
+        });
+    </script>
+}

@@ -1,0 +1,28 @@
+﻿@model LinkShortener.Models.Links
+@{
+    ViewData["Title"] = "Create Link";
+}
+
+<h1>Create Link</h1>
+
+@if (ViewBag.ShortLink != null)
+{
+    <p>Nuevo enlace corto: @ViewBag.ShortLink</p>
+}
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="OriginalUrl" class="control-label"></label>
+        <input asp-for="OriginalUrl" class="form-control" />
+        <span asp-validation-for="OriginalUrl" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
