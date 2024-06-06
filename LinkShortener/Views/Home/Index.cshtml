@@ -4,10 +4,11 @@
 
 @model LinkShortener.Models.Links
 
-<div class="container mt-5">
+<div class="container mt-5 pt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2 class="text-center mb-4">¡Bienvenido a ShortyLink!</h2>
+            <h2 class="text-center mb-4 pt-5">¡Bienvenido a ShortyLink! </h2>
+
             <form asp-action="Create">
                 <div class="input-group mb-3">
                     <input asp-for="OriginalUrl" class="form-control" placeholder="Ingresa tu URL original aquí" />
