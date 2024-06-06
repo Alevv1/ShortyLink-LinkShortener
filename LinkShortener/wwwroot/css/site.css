@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  font-family: sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -18,5 +19,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(243 244 246);
+    font-family: sans-serif;
 }
