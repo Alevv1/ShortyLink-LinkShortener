@@ -23,3 +23,9 @@ Para utilizar ShortyLink localmente:
 3. Configura la cadena de conexión de la base de datos en appsettings.json.
 4. Ejecuta las migraciones de Entity Framework para crear la base de datos.
 5. Ejecuta la aplicación y accede a ella desde tu navegador web.
+
+![Captura de pantalla 2024-06-06 203156](https://github.com/Alevv1/ShortyLink-LinkShortener/assets/80133706/73005e4e-0f7c-4505-90da-5b619a41cf65)
+
+
+
+![Captura de pantalla 2024-06-06 203409](https://github.com/Alevv1/ShortyLink-LinkShortener/assets/80133706/8d49a582-e383-4818-bac8-be4b734541ee)
